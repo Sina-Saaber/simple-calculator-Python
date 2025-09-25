@@ -14,9 +14,6 @@
 ---
 
 ### Preview Screenshots:
-
-<table align="center">
-  <tr>
-    <td><img src="Images/result.png" alt="screen1" height="450" /></td>
-  </tr>
-</table>
+<p>
+    <img src="Images/result.png" alt="Picture is loading" height="450"/>
+</p>
