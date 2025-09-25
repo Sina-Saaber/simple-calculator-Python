@@ -50,18 +50,33 @@ def multiply_operation():
     return round(result, 3)
 
 def divide_operation():
-    user_input = 0 # debug-defult
     first_input = input("Enter Your first number: ")
-    result = convert_int_input(first_input)
-    while user_input not in ["", "exit"] : 
-        number = convert_int_input(user_input)
-        try:
-            result /= number 
-        except ZeroDivisionError:
-            print("Zero divison error!! try again...")
-        user_input = input("Enter another number: ")
-    return round(result, 3)
-
+    user_input = 1 
+    if first_input not in ["", "exit"] : 
+        result = convert_int_input(first_input)
+        while user_input not in ["", "exit"] : 
+            user_input = convert_int_input(input("Enter another number: "))
+            if user_input not in ["", "exit", None] : 
+                try:
+                    result /= user_input 
+                except ZeroDivisionError as e:
+                    print("Zero divison error!!",e , "\ntry again...")
+            else:
+                break
+        return round(result, 3)            
+        
+    # user_input = 0 # debug-defult
+    # first_input = input("Enter Your first number: ")
+    # result = convert_int_input(first_input)
+    # while user_input not in ["", "exit"] : 
+    #     number = convert_int_input(user_input)
+    #     try:
+    #         result /= number 
+    #     except ZeroDivisionError:
+    #         print("Zero divison error!! try again...")
+    #     user_input = input("Enter another number: ")
+    # return round(result, 3)
+    
 def power_operation():
     result = 1
     first_input = input("Inter your first number: ")
