@@ -75,12 +75,13 @@ def power_operation():
 def radical_operation():
     user_input = input("Enter Your number: ")
     number = int(convert_int_input(user_input))
-    i = 0
-    while i < number :
-        if (number - i*i) < 0.1 :
-            return round(i, 3)
-        i += 0.001
-    print("Radical is not defind !!")
+    return round((number ** 0.5), 3)
+    # i = 0
+    # while i < number :
+    #     if (number - i*i) < 0.1 :
+    #         return round(i, 3)
+    #     i += 0.001
+    # print("Radical is not defind !!")
         
 # main function that do conecting and handeling to other functions
 def main_luancher(operation_select):
